@@ -1,5 +1,5 @@
-js actions
------------
+KEITH'S README
+--------------
 
 1. var grumble1 = new GrumbleModel()
     grumble1.set({body: "ow my head hurts!", author:"keith"})
