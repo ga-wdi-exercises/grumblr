@@ -1,0 +1,30 @@
+Create 4 new grumblr backbone objects
+
+		var grumbler1 = new GrumblerModel({author:"Preston Straight", body:"I am grumblin' about making this grumblr!"});
+		var grumbler2 = new GrumblerModel({author:"Toby", body:"I ran out of peanuts!!!"});
+		var grumbler3 = new GrumblerModel({author:"Adrian", body:"No AC in this mofo"});
+		var grumbler4 = new GrumblerModel({author:"Ali", body:"Too many traffic lights"});
+
+Set attribute to a grumblr object
+
+		grumbler1.set({author: "George"});
+
+Save an object 
+
+		gumbler1.save()
+
+Create a grumblr collection object
+
+		var collection = new GrumblersCollection()
+		undefined
+		collection.fetch()
+		Object {readyState: 1, setRequestHeader: function, getAllResponseHeaders: function, getResponseHeader: function, overrideMimeType: function…}
+		collection
+		child {models: Array[6], length: 6, _byId: Object, _idAttr: "id", constructor: function…}
+
+Create a new grumblr within the collection
+
+		var grumbler5 = new GrumblerModel({author: "john", body: "What the hell is this?"})
+		undefined
+		collection.add(grumbler5)
+		child {models: Array[7], length: 7, _byId: Object, _idAttr: "id", constructor: function…}
