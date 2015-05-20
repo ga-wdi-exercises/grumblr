@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+	
+grumblers = Grumbler.create([
+	{author:"Test author 1", body:"one body"},
+	{author:"Test author 2", body:"two body"},
+	{author:"Test author 3", body:"third body"},
+	{author:"Test author 4", body:"four body"}
+])
