@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20150519222906) do
   create_table "grumbles", force: :cascade do |t|
     t.string   "body"
     t.string   "author"
+    t.string   "avatar_url"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
