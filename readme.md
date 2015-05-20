@@ -1,26 +1,19 @@
-# GRUMBLR
+```
+var grumble1 = new Grumble({ body: "It's hot and the air conditioning isn't working.", author: "Me" });  
+var grumble2 = new Grumble({ body: "There is no ice cream in the freezer. I want ice cream.", author: "Preston" });  
+var grumble3 = new Grumble({ body: "It ain't easy being green.", author: "Kermit" });  
+var grumble4 = new Grumble({ body: "Test", author: "Test"});  
 
-JAMJAR has another site request!(of course they do....)
+grumble1.set({ body: "What is the deal with airplane food?", author: "Jerry Seinfeld" });  
 
-So many people have misgivings about so many different things. JAMJAR would like to make a site that users can post their gripes about things.(aka GRUMBLRS.. this is totally not a todo app)
+grumble1.save();  
+grumble2.save();  
+grumble3.save();  
+grumble4.save();  
 
-Here's what you need to do to build this for us!
+var grumbles = new Grumbles([ grumble1, grumble2, grumble3, grumble4 ]);  
 
-- Fork this repo
-- use the existing rails app(which is just a brand new rails app), to create a back end for GRUMBLR
-  - Grumblrs should have a body and author, both strings
-  - use the reminder app and song app made in class as reference!
-- Once the rails back end has been created:
-  - add backbone dependencies(like in class)
-  - add folders and files to your asset pipeline to incorporate backbone collection and models
-
-Create a new readme.md file and place in it, the following JS:
-
-- Create 4 new grumblr backbone objects.
-- set attributes of a new grumblr using `.set()` for one of the grumblrs
-- save the objects on the server side ( aka backend )
-- create a grumblr backbone collection object that contains the 4 grumblr objects above
-- create a new grumblr within that collection that gets saved to the database
-
-** BONUS
-Generate a view using your Grumblr objects and/or collections.
+var grumble5 = new Grumble({ body: "People from Phoenix are called Phoenicians.", author: "Louis C.K." });  
+grumbles.add( grumble5 );  
+grumble5.save();  
+```
