@@ -4,7 +4,7 @@ var grumble2 = new Grumble({ body: "There is no ice cream in the freezer. I want
 var grumble3 = new Grumble({ body: "It ain't easy being green.", author: "Kermit" });  
 var grumble4 = new Grumble({ body: "Test", author: "Test"});  
 
-grumble1.set({ body: "What is the deal with airplane food?", author: "Jerry Seinfeld" });  
+grumble4.set({ body: "What is the deal with airplane food?", author: "Jerry Seinfeld" });  
 
 grumble1.save();  
 grumble2.save();  

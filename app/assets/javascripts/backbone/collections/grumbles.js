@@ -1,4 +1,4 @@
-var Grumbles = Backbone.Collection.extend({
+var GrumblesCollection = Backbone.Collection.extend({
   model: Grumble,
   url: "/grumbles"
 })
