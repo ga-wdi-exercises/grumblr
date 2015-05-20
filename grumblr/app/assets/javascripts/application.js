@@ -15,8 +15,42 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= require_tree ./backbone/routers
+
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
-//= require_tree ./backbone/views
+
 //= require_tree .
+
+
+// $(document).ready(function(){
+//   console.log("jQuery is working!")
+//
+//   grumblr1 = new GrumblrModel()
+//   grumblr1.set({
+//     body:"This song is not bad.  Not great, but not bad.",
+//     author: "DJ"
+//   })
+//
+//   grumblr2 = new GrumblrModel()
+//   grumblr2.set({
+//     body:"Why can't I just relax and watch tv?",
+//     author: "Tina"
+//   })
+//
+//   grumblr3 = new GrumblrModel()
+//   grumblr3.set({
+//     body:"It's not fair!",
+//     author: "John"
+//   })
+//
+//   grumblr4 = new GrumblrModel()
+//   grumblr4.set({
+//     body:"My feet hurt!",
+//     author: "Greg"
+//   })
+//
+//
+//   listOfGrumblrs = new GrumblrsCollection()
+//   listOfGrumblrs.set(grumblr1, grumblr2, grumblr3, grumblr4)
+//
+// })
