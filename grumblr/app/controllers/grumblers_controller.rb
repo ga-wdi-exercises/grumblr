@@ -1,25 +1,41 @@
 class GrumblersController < ApplicationController
+  def index
+    @grumblers = Grumbler.all
+    render status: 200, json: @grumblers.to_json
+  end
 
+  def show
+    @grumbler = Grumbler.find(params[:id])
+    render status: 200, json: @grumbler.to_json
+  end
 
-    def index
-        # @languages = Language.all
-        # @topics = Topic.all
-        # @questions = Question.all
-        # @answers = Answer.all
-        # @question_query = params[:question]
+  def new
+    @grumbler = Grumbler.new
+  end
 
-        # @everything = []
-        # @question_info = @questions.map {|q| [ q.title, language_topic_question_path(Language.first, q.topic, q)]   }
-        # # [q1, q2]
-        # # [["How do I..", "/languages/12/topics/2/question/1"], ["Should I..", "/languages/12/topics/4/question/2"]    ]
-
-        # respond_to do |format|
-        #   format.html { render :index}
-        #   format.json { render json: @question_info}
-        # end
+  def create
+    @grumbler = Grumbler.new(grumbler_params)
+    if @grumbler.save
+      render json: @grumbler.to_json, status: 200
     end
+  end
 
+  def update
+    @grumbler = Grumbler.find(params[:id])
+    if @grumbler.update(grumbler_params)
+      render json: @grumbler.to_json, status: 200
+    end
+  end
 
+  def destroy
+    @grumbler = Grumbler.find(params[:id])
+    if @grumbler.destroy
+      render json: @grumbler.to_json, status: 200
+    end
+  end
 
-
+  private
+    def grumbler_params
+      params.require(:grumbler).permit(:body, :author)
+    end
 end

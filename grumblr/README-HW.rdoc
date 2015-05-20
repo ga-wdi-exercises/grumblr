@@ -1,0 +1,19 @@
+- Create 4 new grumblr backbone objects.
+
+var grumbler1 = new GrumblerModel({author:"Model author 1", body:"Body author 1"})
+var grumbler2 = new GrumblerModel({author:"Model author 2", body:"Body author 2"})
+var grumbler3 = new GrumblerModel({author:"Model author 3", body:"Body author 3"})
+var grumbler4 = new GrumblerModel({author:"Model author 4", body:"Body author 4"})
+
+
+- Set attributes of a new grumblr using .set() for one of the grumblrs
+grumbler2.set({author:"Mode author 2 updated"})
+
+-Save the objects on the server side ( aka backend )
+grumbler2.save()
+
+-Create a grumblr backbone collection object that contains the 4 grumblr objects above
+listOfGrumblers = new GrumblersCollection([grumbler1, grumbler2, grumbler3, grumbler4])
+
+-Create a new grumblr within that collection that gets saved to the database
+-listOfGrumbers.create({body:"body 99",author:"Test author 99" })
