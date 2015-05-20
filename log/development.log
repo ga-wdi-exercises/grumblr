@@ -1,0 +1,121 @@
+  [1m[36m (139.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGrumbles (20150520011212)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (82.5ms)[0m  [1mCREATE TABLE "grumbles" ("id" serial primary key, "body" character varying, "author" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150520011212"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'grumbles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-05-19 21:24:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 2840ms (Views: 2794.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grumbles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-19 21:24:08 -0400
+
+
+Started GET "/assets/backbone/models/grumble.self-2c91d1e6fa6175615a67e712325d924bc625f410d2cefa8b5ffaf433f2aecd26.js?body=1" for ::1 at 2015-05-19 21:24:08 -0400
+
+
+Started GET "/assets/backbone/collections/grumbles.self-ff810f6fd01ae310a857ccf4a68ecbc493d62e888853595f542a64c33d9856ec.js?body=1" for ::1 at 2015-05-19 21:24:08 -0400
+
+
+Started GET "/grumbles.json" for ::1 at 2015-05-19 21:24:16 -0400
+Processing by GrumblesController#index as JSON
+  [1m[35mGrumble Load (16.1ms)[0m  SELECT "grumbles".* FROM "grumbles"
+Completed 200 OK in 61ms (Views: 0.2ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:24:27 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"It ain't easy being green.", "author"=>"Kermit", "grumble"=>{"body"=>"It ain't easy being green.", "author"=>"Kermit"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.4ms)[0m  INSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "It ain't easy being green."], ["author", "Kermit"], ["created_at", "2015-05-20 01:24:27.779774"], ["updated_at", "2015-05-20 01:24:27.779774"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 140ms (Views: 0.1ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/grumbles.json" for ::1 at 2015-05-19 21:25:17 -0400
+Processing by GrumblesController#index as JSON
+  [1m[35mGrumble Load (117.4ms)[0m  SELECT "grumbles".* FROM "grumbles"
+Completed 200 OK in 120ms (Views: 0.1ms | ActiveRecord: 117.4ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:28:37 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"It ain't easy being green.", "author"=>"Kermit", "grumble"=>{"body"=>"It ain't easy being green.", "author"=>"Kermit"}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "It ain't easy being green."], ["author", "Kermit"], ["created_at", "2015-05-20 01:28:37.440676"], ["updated_at", "2015-05-20 01:28:37.440676"]]
+  [1m[36m (42.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 51ms (Views: 0.1ms | ActiveRecord: 43.4ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:28:37 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"There is no ice cream in the freezer. I want ice cream.", "author"=>"Preston", "grumble"=>{"body"=>"There is no ice cream in the freezer. I want ice cream.", "author"=>"Preston"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "There is no ice cream in the freezer. I want ice cream."], ["author", "Preston"], ["created_at", "2015-05-20 01:28:37.496193"], ["updated_at", "2015-05-20 01:28:37.496193"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:28:37 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"It's hot and the air conditioning isn't working.", "author"=>"Me", "grumble"=>{"body"=>"It's hot and the air conditioning isn't working.", "author"=>"Me"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "It's hot and the air conditioning isn't working."], ["author", "Me"], ["created_at", "2015-05-20 01:28:37.508838"], ["updated_at", "2015-05-20 01:28:37.508838"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:28:37 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"What is the deal with airplane food?", "author"=>"Jerry Seinfeld", "grumble"=>{"body"=>"What is the deal with airplane food?", "author"=>"Jerry Seinfeld"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "What is the deal with airplane food?"], ["author", "Jerry Seinfeld"], ["created_at", "2015-05-20 01:28:37.520393"], ["updated_at", "2015-05-20 01:28:37.520393"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-19 21:28:41 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 468ms (Views: 467.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/grumbles.json" for ::1 at 2015-05-19 21:28:46 -0400
+Processing by GrumblesController#index as JSON
+  [1m[36mGrumble Load (0.9ms)[0m  [1mSELECT "grumbles".* FROM "grumbles"[0m
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-19 21:37:12 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 555ms (Views: 550.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/grumbles" for ::1 at 2015-05-19 21:39:24 -0400
+Processing by GrumblesController#create as JSON
+  Parameters: {"body"=>"People from Phoenix are called Phoenicians.", "author"=>"Louis C.K.", "grumble"=>{"body"=>"People from Phoenix are called Phoenicians.", "author"=>"Louis C.K."}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "grumbles" ("body", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "People from Phoenix are called Phoenicians."], ["author", "Louis C.K."], ["created_at", "2015-05-20 01:39:24.044936"], ["updated_at", "2015-05-20 01:39:24.044936"]]
+  [1m[35m (96.0ms)[0m  COMMIT
+Completed 200 OK in 105ms (Views: 0.2ms | ActiveRecord: 96.7ms)
