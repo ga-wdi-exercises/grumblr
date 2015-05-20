@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "application#index"
+  resources :grumbles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
