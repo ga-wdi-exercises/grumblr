@@ -1,28 +1,43 @@
-== README
+HW w10d02
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create 4 new grumblr backbone objects.
+set attributes of a new grumblr using .set() for one of the grumblrs
+save the objects on the server side ( aka backend )
+create a grumblr backbone collection object that contains the 4 grumblr objects above
+create a new grumblr within that collection that gets saved to the database
 
-Things you may want to cover:
+  grumblr1 = new GrumblrModel()
+  grumblr1.set({
+  body:"This song is not bad.  Not great, but not bad.",
+  author: "DJ"
+  })
 
-* Ruby version
+  grumblr1.save
 
-* System dependencies
+  grumblr2 = new GrumblrModel()
+  grumblr2.set({
+  body:"Why can't I just relax and watch tv?",
+  author: "Tina"
+  })
 
-* Configuration
+  grumblr2.save
 
-* Database creation
+  grumblr3 = new GrumblrModel()
+  grumblr3.set({
+  body:"It's not fair!",
+  author: "John"
+  })
 
-* Database initialization
+  grumblr3.save
 
-* How to run the test suite
+  grumblr4 = new GrumblrModel()
+  grumblr4.set({
+  body:"My feet hurt!",
+  author: "Greg"
+  })
 
-* Services (job queues, cache servers, search engines, etc.)
+  grumblr4.save
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  listOfGrumblrs = new GrumblrsCollection()
+  listOfGrumblrs.set({grumblr1, grumblr2, grumblr3, grumblr4)
+  })
