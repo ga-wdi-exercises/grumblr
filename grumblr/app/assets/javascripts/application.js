@@ -15,8 +15,19 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree ./backbone/routers
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/views
 //= require_tree .
+
+$(document).ready(loadGrumblrApp);
+
+function loadGrumblrApp() {
+	mainCollection = new GrumbleCollection();
+  mainCollectionView = new GrumbleListView({collection: mainCollection});
+	mainCollection.fetch();
+	theForm = new FormView();
+	 };

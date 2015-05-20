@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ .grumble {
+   float:left;
+   margin-bottom: 100px;
+   width: 20%;
+   padding: 24px;
+   height: 200px;
+   text-align: center;
+   display: block;
+ }
+
+ img {
+   height: 200px;
+   overflow: hidden;
+ }
