@@ -7,14 +7,36 @@ Homework w10-d03
 
 # Grumblr 2.0
 
+### Part 0
+
+Update your grumble model (in your rails app and js model as apporpriate) to have the following 4 properties,
+all strings:
+
+- an author 	(it's just the author's name as a string)
+- a body 		(the main content of the grumble post)
+- an avatar_url (a string pointing to an image url)
+- a title
+
+#### Seed Script
+
+Write a seed script to populate your database with grumbles. If you need an image url for the avatar_url property, I humbly suggest:
+
+- http://www.placecage.com
+- http://www.fillmurray.com
+- http://www.stevensegallery.com
+- http://www.nicenicejpg.com
+- http://placebear.com
+
 ### Part 1
-Create a template for a single grumble. A grumble should have:
+Create a handlebars template for a single grumble. A grumble should have:
 
 - an author
 - a title
 - an avatar
 - the content
 - a delete button
+
+### Part 2
 
 Define a new view for a single grumble. This view should render the grumble template with the data from that view's specific model.
 
@@ -24,7 +46,8 @@ Define a new view for a single grumble. This view should render the grumble temp
   - When the delete button is clicked the view should be removed from the page
   - The model attached to that view should also be removed from the database
 
-### Part 2
+### Part 3
+
 Define a Grumble List View. This view should have a collection assigned to it.
 
 - The el for this view should be set to the div with an id of `grumble-list`
@@ -32,7 +55,8 @@ Define a Grumble List View. This view should have a collection assigned to it.
   - When a new model is added to the collection, a new view should be created for that model and it should be prepended to the page
   - When the collection is reset, new views should be created for all models and they should be appended to the page
 
-### Part 3
+### Part 4
+
 Define a template for a new grumble form.
 
 Define a Form View. This view should contain a form for creating a new Grumble.
