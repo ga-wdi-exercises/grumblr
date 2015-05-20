@@ -2418,3 +2418,1210 @@ Started GET "/grumblers" for ::1 at 2015-05-19 19:44:13 -0400
 Processing by GrumblersController#index as JSON
   [1m[36mGrumbler Load (0.7ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
 Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:10:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 764ms (Views: 735.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:10:46 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:10:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvatarUrlToGrumblers (20150520212146)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "grumblers" ADD "avatar_url" text[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150520212146"]]
+  [1m[36m (730.0ms)[0m  [1mCOMMIT[0m
+Migrating to AddTitleToGrumblers (20150520212217)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "grumblers" ADD "title" text[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150520212217"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'grumblers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "grumblers" ("author", "body", "avatar_url", "title") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Preston Straight"], ["body", "I am grumblin' about making this grumblr!"], ["avatar_url", "http://www.nicenicejpg.com/100/100"], ["title", "Coding Problems"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "grumblers" ("author", "body", "avatar_url", "title") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author", "Toby"], ["body", "I ran out of peanuts!!!"], ["avatar_url", "http://www.nicenicejpg.com/100/101"], ["title", "First world problems"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "grumblers" ("author", "body", "avatar_url", "title") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Adrian"], ["body", "No AC in this mofo"], ["avatar_url", "http://www.nicenicejpg.com/101/101"], ["title", "Hot Problems"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "grumblers" ("author", "body", "avatar_url", "title") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author", "Ali"], ["body", "Too many traffic lights"], ["avatar_url", "http://www.nicenicejpg.com/101/100"], ["title", "Driving Problems"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-05-20 17:42:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 1669ms (Views: 1652.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:42:14 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:43:02 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:43:02 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:43:10 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:43:10 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:43:12 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:43:12 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:43:23 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 60ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:43:24 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:44:02 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 65ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:44:02 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:44:44 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-229f35257d09d7af84bc3a89443d849329990f2b96a67ba503a205e1e0bdab08.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:44:44 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:44:53 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:45:22 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 160ms (Views: 159.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/assets/application.self-fd44a99e3f102fcc0ca5f230e7a3e6f495c7c7cb576789fb45df1ae9b46ae632.js?body=1" for ::1 at 2015-05-20 17:45:22 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:47:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.1ms)
+Completed 200 OK in 892ms (Views: 861.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/assets/application.self-8ab0c00bcae177731d1074014536468e799e0676490a279b47eb1eebe0dac8b4.js?body=1" for ::1 at 2015-05-20 17:47:05 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:48:22 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 164ms (Views: 163.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:48:23 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:48:23 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (1.1ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:49:35 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 183ms (Views: 181.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/backbone/views/grumblerListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/assets/application.self-2819981f8289bd0f22b50c8da5c482679e9ca6bc0849b19bbec1aa2c2b4b15ac.js?body=1" for ::1 at 2015-05-20 17:49:35 -0400
+
+
+Started GET "/" for ::1 at 2015-05-20 17:50:15 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 190ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:50:15 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:50:16 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (0.8ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:51:47 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-4648ced709e90280014071e9474cbcda1873f860a87c1f4f81d1a405552bd34b.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:51:47 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:51:48 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:51:48 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (0.6ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:55:16 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 167ms (Views: 166.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-6d25bcde50a4e14803964e2777fd0bc39c388cdbf8b1ce80a3ec286d16720977.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:55:17 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:55:17 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (0.7ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:56:07 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.1ms)
+Completed 200 OK in 173ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-15311189f87f6ddede8b2d0cd933ea25b86f061b142ec096788d33a9b6873447.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:56:07 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:56:07 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (0.7ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:58:22 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:58:22 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:58:22 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-15311189f87f6ddede8b2d0cd933ea25b86f061b142ec096788d33a9b6873447.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:58:23 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:58:23 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (0.7ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:58:33 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 185ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-da70baf9e0071362dcd4cce139c54c4ac1832693dfb9bfae2fa461acfbd3dec9.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a2bb1ae65d0c440f1dbfc7ea57d59e04cee4cf3570bca984ac014bae32999ddc.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:58:33 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:58:33 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (1.4ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:59:40 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 186ms (Views: 184.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-47f2af2f8bc3e6d3f4763d9c3ee85b0c5d7fa5696b4c6a2e50442615b2e4af6c.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-a546696979c0bae9147c4b6c63ba1b9f2df2d729e99c20a7b146050941084aae.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:59:40 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:59:40 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (2.1ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 17:59:51 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 161ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-47f2af2f8bc3e6d3f4763d9c3ee85b0c5d7fa5696b4c6a2e50442615b2e4af6c.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-67afbeb802a709118d07a4d25cc72fbd9d6babe4630d7c30c5dcc08a7477fc6d.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 17:59:52 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 17:59:52 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (0.5ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 18:00:22 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 165ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-ece91338c80e8478c965574daf50b9cedacf09de393917bef3ba83ccd76717c0.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-67afbeb802a709118d07a4d25cc72fbd9d6babe4630d7c30c5dcc08a7477fc6d.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 18:00:22 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 18:00:22 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (0.6ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 18:00:32 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 197ms (Views: 195.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-83d53c078336dfef981db64ea54d5818609601e9127a12a79c594a0ae35d458b.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-67afbeb802a709118d07a4d25cc72fbd9d6babe4630d7c30c5dcc08a7477fc6d.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 18:00:32 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 18:00:32 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (0.7ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 18:02:06 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-47f2af2f8bc3e6d3f4763d9c3ee85b0c5d7fa5696b4c6a2e50442615b2e4af6c.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-67afbeb802a709118d07a4d25cc72fbd9d6babe4630d7c30c5dcc08a7477fc6d.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 18:02:06 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 18:02:06 -0400
+Processing by GrumblersController#index as JSON
+  [1m[36mGrumbler Load (0.5ms)[0m  [1mSELECT "grumblers".* FROM "grumblers"[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-20 18:03:01 -0400
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.1ms)
+Completed 200 OK in 252ms (Views: 250.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/templates/grumblrs/grumblr.self-83e45ffb016b88c803b72335ccd6c60b7af3683f3f9a0abd01384704e74a7dbf.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblersListView.self-278a5d61e9ec6ebc7a050bc5f326fb4b730fdb3df054fa22f6ab186155b20e14.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/backbone/models/grumblerModel.self-67d18fa3fd6452ffd7fce67988847fedaace3e53b5ec55586be9a51304b0f00f.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/backbone/collections/grumblersCollection.self-98b560186cb2127ba0ad09f350a31ed1dda9245053ec53f4cb51ba3a7a3a5457.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/backbone/views/grumblerView.self-47f2af2f8bc3e6d3f4763d9c3ee85b0c5d7fa5696b4c6a2e50442615b2e4af6c.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/assets/application.self-bc07531c2367cfb0b5aefd26b24d416cdd10e6efab314bee4da6424fe862770c.js?body=1" for ::1 at 2015-05-20 18:03:02 -0400
+
+
+Started GET "/grumblers" for ::1 at 2015-05-20 18:03:02 -0400
+Processing by GrumblersController#index as JSON
+  [1m[35mGrumbler Load (0.7ms)[0m  SELECT "grumblers".* FROM "grumblers"
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/grumblers/1" for ::1 at 2015-05-20 18:03:13 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGrumbler Load (0.4ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1272.0ms)[0m  COMMIT
+Completed 200 OK in 1348ms (Views: 0.2ms | ActiveRecord: 1273.3ms)
+
+
+Started DELETE "/grumblers/2" for ::1 at 2015-05-20 18:03:14 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mGrumbler Load (0.7ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/grumblers/3" for ::1 at 2015-05-20 18:03:14 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mGrumbler Load (0.5ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (12.8ms)[0m  COMMIT
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 13.9ms)
+
+
+Started DELETE "/grumblers/4" for ::1 at 2015-05-20 18:03:15 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mGrumbler Load (0.5ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/grumblers/5" for ::1 at 2015-05-20 18:03:16 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGrumbler Load (0.6ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/grumblers/6" for ::1 at 2015-05-20 18:03:17 -0400
+Processing by GrumblersController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mGrumbler Load (0.7ms)[0m  [1mSELECT  "grumblers".* FROM "grumblers" WHERE "grumblers"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "grumblers" WHERE "grumblers"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.4ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.5ms)
