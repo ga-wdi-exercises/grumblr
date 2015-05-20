@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+	# Grumbler.destroy_all	
+	# grumblers = Grumbler.create([{body: "example of a body"}, {author: "John Doe"}])  
