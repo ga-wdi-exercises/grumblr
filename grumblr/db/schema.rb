@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20150520113348) do
   enable_extension "plpgsql"
 
   create_table "grumblrs", force: :cascade do |t|
+  	t.text "title"
     t.string "body"
     t.string "author"
+    t.string "avatar_url"
   end
 
 end
