@@ -28,4 +28,5 @@ function loadApp() {
 	mainCollection = new Grumbles();
   	mainCollectionView = new GrumbleListView({collection: mainCollection});
 	mainCollection.fetch();
+	addForm = new GrumbleForm();
 	};
