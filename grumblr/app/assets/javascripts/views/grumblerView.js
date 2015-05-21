@@ -16,7 +16,7 @@ var GrumblerView = Backbone.View.extend({
 		this.$el.html(renderedHTML);
 	},
 	deleteGrumbler: function(){
-		this.!el.remove();
+		this.$el.remove();
 		this.model.destroy();
 	}
 })

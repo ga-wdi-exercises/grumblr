@@ -1,4 +1,4 @@
-Grumbler.create([
+Grumble.create([
 	{
 		body: "I'm only responsible for what I say, not for what you understand",
 		author: "anonymous",

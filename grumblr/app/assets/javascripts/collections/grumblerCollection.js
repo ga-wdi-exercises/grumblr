@@ -1,4 +1,4 @@
-var grumblerCollection = Backbone.Collection.extend({
+var GrumblersCollection = Backbone.Collection.extend({
 	initialize: function() {
 		console.log("collection of grumblers has been made")
 	},

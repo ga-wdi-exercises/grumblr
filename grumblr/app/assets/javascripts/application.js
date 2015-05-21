@@ -17,16 +17,16 @@
 //= require backbone
 //= require handlebars.runtime
 //= require_tree ./templates
-//= require_tree ./javascripts/routers
-//= require_tree ./javascripts/models
-//= require_tree ./javascripts/collections
-//= require_tree ./javascripts/views
+//= require_tree ./routers
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
 //= require_tree .
 
 
 $(document).ready(loadGrumbler);
 function loadGrumbler(){
-	mainCollection = new GrublersCollection();
-	mainCollectionView = new GrublersListView({collection: mainCollection});
+	mainCollection = new GrumblersCollection();
+	mainCollectionView = new GrumblersListView({collection: mainCollection});
 	mainCollection.fetch();
 }
