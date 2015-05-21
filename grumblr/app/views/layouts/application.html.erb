@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grumblr</title>
+  <title>GrumblrApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <h1>Grumblr</h1>
 
   <div id="grumblrs">
 
   </div>
+  <header><img src="https://camo.githubusercontent.com/613bc7eb2a28483a252a45946af877f7034a919d/687474703a2f2f692e696d6775722e636f6d2f554a38747232412e6a7067"></header>
+  <div id='grumble-form'></div>
+  <div id='grumble-list'><span class='add'>Add Grumble</span></div>
 
 <%= yield %>
+
+
 
 </body>
 </html>
