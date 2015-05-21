@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20150520133433) do
   enable_extension "plpgsql"
 
   create_table "grumbles", force: :cascade do |t|
-    t.string   "body"
+    t.string   "title"
     t.string   "author"
+    t.string   "avatar_url"
+    t.string   "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
