@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400|Roboto:300);
+  body {
+    background: rgb(114,136,149);
+    font-family: Roboto;
+    color: cornsilk;
+  }
+ .grumble {
+  width: 50%;
+  height: 200px;
+  border: 1px solid rgba(120,120,120,.1);
+  border-top: 5px solid indianred;
+  
+  /* Webkit (Safari/Chrome) */ -webkit-box-shadow: 2px 2px 40px 4px rgba(0,0,0,.3);
+  margin: 10px auto;
+  text-align: left;
+  background: rgba(120,120,120,.1);
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+  }
+  span {
+    font-size: 20px;
+    font-weight: 200;
+    color: cornsilk;
+    cursor: pointer;
+  }
+  span:hover {
+    font-weight: 300;
+    color:indianred;
+  }
+ }
+ header {
+
+  img {
+    float:left;
+  }
+ }
+
+.grumble-form-div {
+  width: 50%;
+  margin:5px auto;
+  height: 50px;
+  border-top: 5px solid coral;
+  /* Webkit (Safari/Chrome) */ -webkit-box-shadow: 2px 2px 50px 4px rgba(0,0,0,.4);
+  background: rgba(120,120,120,.4);
+  
+  input {
+    height: 45px;
+    width: 20%;
+    background:rgb(114,136,149);
+
+  }
+  span {
+    color: cornsilk;
+    cursor:pointer;
+  }
+ }
