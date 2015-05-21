@@ -28,4 +28,5 @@ $(document).ready(loadGrumblersApp);
 			mainCollection = new GrumblersCollection();
 			mainCollectionView = new GrumblersListView({collection: mainCollection})
 			mainCollection.fetch();
+			theForm = new FormView();
 		}

@@ -3,7 +3,7 @@ var GrumblerView = Backbone.View.extend({
 	tagName: "div",
 
 	events: {
-		'click.button':'deleteGrumbler'
+		'click .delete':'deleteGrumbler'
 	},
 
 	initialize: function(){
