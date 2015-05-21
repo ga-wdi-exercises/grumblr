@@ -29,5 +29,6 @@ $(document).ready(loadGrumblesApp);
 function loadGrumblesApp() {
   mainCollection = new GrumblesCollection();
   mainListView = new GrumblesListView({collection: mainCollection});
-  mainCollection.fetch({reset: true});
-}
+  mainCollection.fetch();
+  newform = new FormView();
+};

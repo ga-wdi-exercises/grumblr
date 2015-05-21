@@ -18,7 +18,7 @@ var GrumbleView = Backbone.View.extend({
   },
 
   render: function(){
-    var renderedHTML = HandlebarsTemplates['grumble-list/show'](this.model.toJSON());
+    var renderedHTML = HandlebarsTemplates['grumbles/show'](this.model.toJSON());
     this.$el.html(renderedHTML);
   },
 
