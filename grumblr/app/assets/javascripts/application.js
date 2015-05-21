@@ -15,8 +15,18 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree ./javascripts/routers
 //= require_tree ./javascripts/models
 //= require_tree ./javascripts/collections
 //= require_tree ./javascripts/views
 //= require_tree .
+
+
+$(document).ready(loadGrumbler);
+function loadGrumbler(){
+	mainCollection = new GrublersCollection();
+	mainCollectionView = new GrublersListView({collection: mainCollection});
+	mainCollection.fetch();
+}
