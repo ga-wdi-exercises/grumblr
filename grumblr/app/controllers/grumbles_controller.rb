@@ -32,6 +32,6 @@ class GrumblesController < ApplicationController
 
   private
   def grumble_params
-    params.require(:grumble).permit(:title, :audio_url, :album_art, :artist, :genre)
+    params.require(:grumble).permit!
   end
 end

@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
   @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400|Roboto:300);
+ 
   body {
     background: rgb(114,136,149);
     font-family: Roboto;
@@ -34,6 +36,7 @@
     width: 100px;
     border-radius: 50%;
     float: left;
+    margin: 20px;
   }
   span {
     font-size: 20px;
@@ -53,6 +56,9 @@
   }
  }
 
+span.add {
+  margin: 15px;
+}
 .grumble-form-div {
   width: 50%;
   margin:5px auto;

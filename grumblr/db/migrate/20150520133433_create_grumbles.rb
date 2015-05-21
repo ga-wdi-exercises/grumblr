@@ -1,9 +1,12 @@
 class CreateGrumbles < ActiveRecord::Migration
   def change
     create_table :grumbles do |t|
-      t.string :body
       t.string :author
-      t.timestamps null: false
+      t.string :content
+      t.string :title
+      t.string :image
+      t.string :avatar
+      t.timestamps
     end
   end
 end
