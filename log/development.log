@@ -1720,3 +1720,74 @@ Started GET "/grumbles" for ::1 at 2015-05-20 18:51:30 -0400
 Processing by GrumblesController#index as JSON
   [1m[35mGrumble Load (0.8ms)[0m  SELECT "grumbles".* FROM "grumbles"
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-21 09:01:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendered text template within layouts/application (0.0ms)
+Completed 200 OK in 1953ms (Views: 1906.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grumbles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-95e05b917009519148c662c7fb1d60ad2437530ec915c2189ed2ab13275307c8.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/jquery.self-61ea3af5a3707248b6ca7b15d10bb36531cf15c7772ac4e0ba7e21ccc6663f1f.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/application.self-8b85d8aaa57d122cd4ef78502be7c182ac60e7238945b51286bc6ecbce3eaaab.css?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/underscore.self-a10aa2eb9078c2e19f181ac722b1c19a29b8db1069556c508a3beb5c46289d7b.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/backbone.self-8db0f2a9b9a5e8b74b969139603a1ce1e55d5431e1628a6e2b5c3e2af42bd731.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/templates/grumbles/form.self-25a2d48316214d9a8c2b76de967c970028d3f72c9881eefebd9924214c896c4e.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/handlebars.runtime.self-aa7d73b451c96e5aac34200b106e5a2a77aa28b24ed153ce37ddcbbd3d268ec9.js?body=1" for ::1 at 2015-05-21 09:01:29 -0400
+
+
+Started GET "/assets/templates/grumbles/show.self-e3a70a08a5bb768553cad1195f36da8b9162407589376a8c17083ccadd8bb8d9.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/backbone/models/grumble.self-2c91d1e6fa6175615a67e712325d924bc625f410d2cefa8b5ffaf433f2aecd26.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/backbone/collections/grumbles.self-244e6220d91e9f8d06ff18369fe26ad046ba6ef2d5aa4f44a66fb03fc21bba6a.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/backbone/views/formView.self-3833b9a61d378fde67a5a956231e89029fb14ef0c71b63c204e7b5be96dcbc5d.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/backbone/views/grumbleView.self-30939426df364096ce1d6332ad7566f33118498e774c00f48e45d30ad295e9c0.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/backbone/views/grumblesListView.self-df0b3a05a24c90c0bfb2bfd10063b6b063b2ef1438f83709507eb5caba3a1509.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/assets/application.self-5c95183d51e857e2af3efd235eb713675f6827c6e9fc155467ba3501a9d0cb16.js?body=1" for ::1 at 2015-05-21 09:01:30 -0400
+
+
+Started GET "/grumbles" for ::1 at 2015-05-21 09:01:30 -0400
+Processing by GrumblesController#index as JSON
+  [1m[35mGrumble Load (1.2ms)[0m  SELECT "grumbles".* FROM "grumbles"
+Completed 200 OK in 157ms (Views: 0.1ms | ActiveRecord: 130.3ms)
+
+
+Started DELETE "/grumbles/5" for ::1 at 2015-05-21 09:01:41 -0400
+Processing by GrumblesController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGrumble Load (64.3ms)[0m  [1mSELECT  "grumbles".* FROM "grumbles" WHERE "grumbles"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (66.8ms)[0m  BEGIN
+  [1m[36mSQL (144.6ms)[0m  [1mDELETE FROM "grumbles" WHERE "grumbles"."id" = $1[0m  [["id", 5]]
+  [1m[35m (42.5ms)[0m  COMMIT
+Completed 200 OK in 483ms (Views: 0.1ms | ActiveRecord: 318.5ms)
