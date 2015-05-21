@@ -8,7 +8,6 @@ Create a new readme.md file and place in it, the following JS:
 
 ** BONUS
 Generate a view using your Grumblr objects and/or collections.
-
 $(document).ready(function(){
   grumblr1 = new GrumbleModel({
     author:"Me"
