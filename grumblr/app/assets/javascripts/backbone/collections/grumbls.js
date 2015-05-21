@@ -1,6 +1,6 @@
 var GrumblsCollection = Backbone.Collection.extend({
   initialize: function() {
-    console.log('New Grumbls Collection Created');
+    console.log('created grumbl collection');
   },
   model: GrumblModel,
   url: '/grumbls'

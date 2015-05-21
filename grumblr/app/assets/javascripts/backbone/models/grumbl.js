@@ -1,6 +1,6 @@
 var GrumblModel = Backbone.Model.extend({
   initialize: function(){
-    console.log('New Grumbl Model Created');
+    console.log('created grumbl model');
   },
   urlRoot: '/grumbls'
 });
