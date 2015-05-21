@@ -20,3 +20,14 @@
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/views
 //= require_tree .
+
+
+
+$(document).ready(loadGrumbles);
+
+
+function loadGrumbles(){
+  mainCollection = new GrumblesCollection();
+  mainListView = new GrumblrsListView({collection: mainCollection});
+  mainCollection.fetch({reset: true});
+}
