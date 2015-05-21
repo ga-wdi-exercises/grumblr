@@ -1,6 +1,6 @@
 var GrumbleModel = Backbone.Model.extend({
-    initialize: function(){
-      console.log("SCHWAM GRUMBLE")
-    },
-    urlRoot: '/grumbles'
-})
+  initialize: function(){
+    console.log("SCHWAM GRUMBLE");
+  },
+  urlRoot: '/grumbles'
+});
