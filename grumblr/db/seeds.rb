@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+grumbles = Grumble.create([
+  {
+    author: "Felix",
+    body: "The hooman refuses to pet me enough",
+    avatar_url: "http://placekitten.com/g/200/300",
+    title: "What is Love?"
+  },
+  {
+    author: "Winston",
+    body: "Someone keeps stealing my bananas",
+    avatar_url: "http://placekitten.com/g/200/300",
+    title: "They're not just for Monkeys"
+  },
+  {
+    author: "BasementCat",
+    body: "Someone keeps turning the light on making it harder to murder people",
+    avatar_url: "http://placekitten.com/g/200/300",
+    title: "Sneaking: Interrupted"
+  },
+  {
+    author: "Garfield",
+    body: "Someone burnt the lasagna",
+    avatar_url: "http://placekitten.com/g/200/300",
+    title: "Learn to Use an Oven"
+  }
+]);

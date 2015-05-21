@@ -13,4 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
+//= require backbone
+//= require handlebars.runtime
+//= require_tree ./templates
+//= require_tree ./backbone/routers
+//= require_tree ./backbone/models
+//= require_tree ./backbone/collections
+//= require_tree ./backbone/views
 //= require_tree .
+
+$(document).ready(loadGrumbles);
+function loadGrumbles(){
+  mainCollection = new GrumblesCollection();
+  mainCollection.fetch().done(function(){
+    mainCollection.each(function(currentModel){
+      var currentView = new GrumbleView({
+        model: currentModel
+      });
+      $('#grumble').append(currentView.$el);
+    })
+  })
+}
