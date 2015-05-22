@@ -32,6 +32,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:song).permit(:title, :audio_url, :album_art, :artist, :genre)
+    params.require(:post).permit(:body, :author, :title, :avatar_url)
   end
 end
