@@ -1,7 +1,11 @@
-"use strict"
+'use strict'
 
 (function(){
   angular
-  .module()
-  .controller('Grumblr', grumblrController)
+  .module('grumblr', [])
+  .controller('grumblr_controller', grumblrController);
+
+  function grumblrController(){
+    var vm = this;
+  }
 })();
