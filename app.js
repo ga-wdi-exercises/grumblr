@@ -2,10 +2,10 @@
 
 (function(){
   angular
-  .module('grumblr', [])
-  .controller('grumblr_controller', grumblrController);
+  .module('grumblr',[])
+  .controller('grumblr_controller', grumblrControllerFunction);
 
-  function grumblrController(){
-    var vm = this;
+  function grumblrControllerFunction(){
+    this.grumble = grumbles
   }
 })();
